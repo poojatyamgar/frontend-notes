@@ -1,0 +1,56 @@
+<html>
+    <style>
+        /* [class*="col-"]{
+            background-color: fuchsia;
+        } */
+        .column{
+            width:25%;
+        }
+
+        @media screen and (max-width: 992px){
+            .column{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            .column{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            div.onbigscreenonly{
+                display:none;
+            }
+        }
+
+        div{
+            float: left;
+            box-sizing: border-box;
+            height: 500px;
+            background-color: lightblue;
+            border: 1px solid blue;
+        }
+
+        div.onbigscreenonly{
+            background-color: fuchsia;
+        }
+
+        div div:first-child{
+            background-color: teal;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+    <body>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column onbigscreenonly"></div>
+        <div>
+            <div></div>
+        </div>
+    </body>
+</html>
